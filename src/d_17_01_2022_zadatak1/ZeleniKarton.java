@@ -56,11 +56,9 @@ public class ZeleniKarton {
 			System.out.println("Nije polozio ispit");
 		}
 		System.out.println();
+	
+	
 	}
-	public double prosecnaOcena() {
-		double prosecnaOcena=0;
-		 prosecnaOcena= prosecnaOcena+this.ocena;
-		 return prosecnaOcena;
-	}
+
 	
 }

@@ -52,14 +52,19 @@ public class zadatak1 {
 		for (int i =0; i<spisakIspita.size();i++) {
 			spisakIspita.get(i).print();
 		}
-		
-	/*	for (int i =0; i<spisakIspita.size();i++) {
-			double prosecnaOcena=0;
+		double zbirOcena=0;
+		for (int i =0; i<spisakIspita.size();i++) {
 			spisakIspita.get(i).getOcena();
-			prosecnaOcena=spisakIspita.get(i).prosecnaOcena()+ prosecnaOcena;
-			System.out.println("Prosecna ocena je: " + spisakIspita.get(i).prosecnaOcena());
-		}*/
+			zbirOcena=zbirOcena+spisakIspita.get(i).getOcena();
+		}
+		System.out.println("Prosecna ocena je: " + zbirOcena/spisakIspita.size());
 		
+		double brojNePolozenih=0;
+		for (int i =0; i<spisakIspita.size();i++) {
+			if(spisakIspita.get(i).getOcena()<6) {
+			brojNePolozenih=brojNePolozenih+1;
+		}
+	}System.out.println("Prosecna ocena polozenih je: " + zbirOcena/(spisakIspita.size()-brojNePolozenih));
 	}
-
 }
+
