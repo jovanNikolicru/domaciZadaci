@@ -48,13 +48,20 @@ public class Transakcija {
 		
 	}
 	public void izvrsiTransakciju(double prosledjeno) {
+		if (racunSaKogSePrenosi.getStanje()<visinaTransakcje(prosledjeno)) {
+			this.racunNaKojiSePrenosi=racunNaKojiSePrenosi;
+			this.racunSaKogSePrenosi=racunSaKogSePrenosi;
+			System.out.println("Transakcija nije moguca premalo sredstava na racunu");
+		 }else {
 	this.racunSaKogSePrenosi.uplataIsplata(prosledjeno+provizija(prosledjeno));
 		this.racunNaKojiSePrenosi.uplataIsplata(prosledjeno*(-1));
-		if (this.racunSaKogSePrenosi.getStanje()<prosledjeno+provizija(prosledjeno)) {
-			System.out.println("Nema dovoljno sredstava");
-			this.racunSaKogSePrenosi.getStanje();
+		System.out.println("Transakcija uspesna");
+		 }
 		}
-
+	public double visinaTransakcje(double prosledjeno) {
+		
+		double visinaTranskacije = prosledjeno + provizija(prosledjeno);
+		return visinaTranskacije;
 	}
 	public void print() {
 		System.out.println(this.id);
