@@ -60,5 +60,9 @@ public class Igrac extends Osoba {
 	}
 	public void print() {
 		super.print();
+		System.out.println("Broj dresa: " + broj +"  i igra na poziciji " + pozicija);
+		if(kapiten==true) {
+			System.out.println("Igrac je kapiten tima");
+		}
 	}
 }
