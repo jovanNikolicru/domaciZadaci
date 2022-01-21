@@ -40,7 +40,7 @@ public class zadatak1 {
 		ispiti.add(ist1);
 		Ispiti ist2=new Ispiti("ist2", 9, "Mika");
 		ispiti.add(ist2);
-		Ispiti ist3=new Ispiti("ist3", 10, "Mika");
+		Ispiti ist3=new Ispiti("ist3", 8, "Mika");
 		ispiti.add(ist3);
 		Ispiti ist4=new Ispiti("ist4", 5, "Mika");
 		ispiti.add(ist4);
