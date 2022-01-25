@@ -87,7 +87,7 @@ public class zadatak5 {
 			proizvodi.get(i).print();
 			ukupnaCena=ukupnaCena +proizvodi.get(i).ukupnaCena();
 		}System.out.println("Ukupna cena porudzbine je " + ukupnaCena);
-		System.out.println("bla bla");
+		
 		
 	}
 
